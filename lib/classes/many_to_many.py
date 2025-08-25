@@ -46,7 +46,7 @@ class Article:
 class Author:
     def __init__(self, name):
         self.name = name
-
+   #prop to return author name
     @property
     def name(self):
         return self._name
@@ -134,4 +134,4 @@ class Magazine:
     def top_publisher(cls): #returns magazines with most articles
         if not Article.all:
             return None    #returns none if no magazine that exist
-        return max(cls.all, key=lambda mag: len(mag.articles()))
+        return max(cls.all, key=lambda mag: len(mag.articles())) #lambda function finds mag with the maximum no of articles
